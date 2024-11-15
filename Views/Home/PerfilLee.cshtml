@@ -514,6 +514,7 @@
                     <div class="custom-file">
                         <input type="file" class="custom-file-input" id="myfile" name="myfile">
                         <label class="custom-file-label" for="myfile" id="subirfile">Subir Archivo..</label>
+                        <p> mouseover
                         <div class="invalid-feedback">No fue posible seleccionar ese archivo</div>
                     </div>
                     <div class="modal-footer">
@@ -671,25 +672,25 @@
     
     <script>
     window.onload = () => {
-    console.log("Página cargada!");
-    setTimeout(function() {
-        console.log("Iniciando el text-to-speech...");
-        text_to_speech('Bienvenido @Model.nombre_apellido');
-        setupPersonalListeners();
-        setupEducacionListeners();
-        setupAdaptacionListeners();
-        setupCUDListeners();
-        setupIdiomaListeners();
-        setupCertificacionesListeners();
-        setupPlussListeners();
-        AbrirFiles();
-        BorrarVoz(item);
-        document.getElementById('subirfile').addEventListener('mouseover', function() {
-            text_to_speech('Subir archivo ');
-            console.log("sbir file") // arreglar esto
-        });
-    }, 200); // 4.5 segundos
-};
+        console.log("Página cargada!");
+        setTimeout(function() {
+            console.log("Iniciando el text-to-speech...");
+            text_to_speech('Bienvenido @Model.nombre_apellido');
+            setupPersonalListeners();
+            setupEducacionListeners();
+            setupAdaptacionListeners();
+            setupCUDListeners();
+            setupIdiomaListeners();
+            setupCertificacionesListeners();
+            setupPlussListeners();
+            AbrirFiles();
+            BorrarVoz(item);
+            document.getElementById('subirfile').addEventListener('mouseover', function() {
+                text_to_speech('Subir archivo ');
+                console.log("subir file") // arreglar esto
+            });
+        }, 200); // 4.5 segundos
+    };
     function handleFiles(files) {
     console.log('handleFiles function called');
     const fileList = document.getElementById('fileList');
